@@ -1,0 +1,284 @@
+.header {
+ width: 1200px;
+ min-height: 1000px;
+ background-color: white;
+ margin-left: -600px;
+ left: 50%;
+ margin-bottom: 10px;
+ background-color: rgba(0, 0, 0, 0.25);
+ background-repeat: no-repeat;
+ z-index: 100;
+ position: absolute;
+ border-left: 10px;
+ border-right: 10px;
+ border-bottom: 10px;
+ box-shadow: 0 0 20px 4px;
+ border-color: rgb(142, 0, 93);
+}
+
+.panelnavigation {
+width: auto;
+height: 50px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: stretch;
+}
+.box {
+ width: 1170px;
+ height: 1000px;
+ position: relative;
+ color: white;
+ padding: 15px;
+}
+.box_news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+.text_news_1 {
+  top: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.news {
+  width: 100%;
+  max-width: 570px;
+  max-height: 380px; /* опционально */
+  margin: 10px;
+  opacity: .99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.news:before {
+  content: '';
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.news img {
+  display: block;
+  width: 100%; /* ширина картинки */
+  height: auto; /* высота картинки */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.news .text_news {
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+}
+.news .text_news span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.news .text_news .title {
+  line-height: 1;
+  font-weight: normal;
+  font-size: 18px;
+}
+.news .text_news .info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.news:focus:before,
+.news:focus span, .news:hover:before,
+.news:hover span {
+  opacity: 1;
+}
+.news:focus:before, .news:hover:before {
+  top: 50%;
+}
+.news:focus span, .news:hover span {
+  top: 0;
+}
+.news:focus .title, .news:hover .title {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+.news:focus .info, .news:hover .info {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+h1 span {
+  color			: white;
+	font			: bold 24px/45px Helvetica, Sans-Serif;
+	background		: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+	background		: rgba(0, 0, 0, 0.7);
+	padding			: 10px;
+  border-radius: 7px;
+}
+.imagebox {
+  display: block;
+  border: 1px solid rgb(75, 75, 75);
+  padding: 2px;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  text-align: left;
+  float: right;
+  left: auto;
+}
+.imagebox_news {
+  display: block;
+  border: 1px solid rgb(135, 92, 92);
+  padding: 2px;
+  margin: 10px;
+  width: 550px;
+}
+
+.text_image_box {
+  text-align: left;
+  position	: relative;
+	left		: 0;
+	width		: 100%;
+  color			: white;
+	font			: bold 24px/45px Helvetica, Sans-Serif;
+	letter-spacing		: -1px;
+	background		: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+	background		: rgba(0, 0, 0, 0.7);
+	padding			: 10px;
+}
+.boxnavigation{
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(120, 0, 15, 0.4);
+}
+.button{
+ text-decoration:none;
+ text-align:center;
+ padding:7px 100px;
+ border:none;
+
+ font:25px Arial, Helvetica, sans-serif;
+ font-weight:bold;
+ color:#E5FFFF;
+ background-color:#7d0000;
+ background-image: -moz-linear-gradient(top, #7d0000 0%, #5e0000 100%);
+ background-image: -webkit-linear-gradient(top, #7d0000 0%, #5e0000 100%);
+ background-image: -o-linear-gradient(top, #7d0000 0%, #5e0000 100%);
+ background-image: -ms-linear-gradient(top, #7d0000 0% ,#5e0000 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e0000', endColorstr='#5e0000',GradientType=0 );
+ background-image: linear-gradient(top, #7d0000 0% ,#5e0000 100%);
+ -webkit-box-shadow:0px 9px 5px #000000;
+ -moz-box-shadow: 0px 9px 5px #000000;
+ box-shadow:1px 5px 5px #000000;
+
+  }
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  z-index: 100;
+}
+a:hover {
+   background: rgb(142, 0, 93)
+  }
+
+p {
+ text-align: left;
+ border-bottom:
+}
+h1 {
+  text-align: center;
+}
+.underline {
+  border-bottom: 1px solid currentColor;
+}
+h1 span.spacer {
+	padding-bottom: 8px;
+}
+.image {
+  display: block;
+  left: 10px;
+  padding: 3px;
+  width: 220px;
+  height: 236px;
+}
+.image_news
+{
+  display: block;
+ width: 100%;
+ height: 100%;
+}
+.video {
+  position: fixed;
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+#video_bg {
+	/* Делаем так, чтобы видеофон занимал фиксированное положение. */
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* Располагаем наш фон под всем содержимым на странице.
+    Для этого используем отрицательный z-index. */
+	z-index: -1000;
+	/* Растягиваем видео так, чтобы не было видно черных полос и
+	чтобы независимо от разрешения экрана видеофон занимал все рабочее пространство. */
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+@media (min-aspect-ratio: 16/9) {
+	#video_bg {
+		height: 300%;
+		top: -100%;
+	}
+}
+@media (max-aspect-ratio: 16/9) {
+	#video_bg {
+		width: 300%;
+		left: -100%;
+	}
+}
+@supports (object-fit: cover) {
+	#video_bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
